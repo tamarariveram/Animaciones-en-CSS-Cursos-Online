@@ -1,5 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #46467a;
+  --color-secondary: #7766c6;
+  --color-tertiary: #ffc212;
+  --color-quaternary: #f9b0c3;
+  --background-color: #e0dffd;
+  --background-color-secondary: rgb(245, 245, 245);
+  --font-color: #46467a;
+  --font-color-secondary: #b5b5b5;
+  --font-family: "Onest", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  display: grid;
+  grid-template-areas:
+    "menu cursos"
+    "menu pie-pag";
+  height: 100vh;
+  grid-template-columns: 1fr 6fr;
+  background-color: var(--background-color-secondary);
+  padding: 20px;
+}
+
+/* CSS menú lateral */
+
+aside {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.047);
+}
+
+.logo{
+    width: 90%;
+}
+
+select{
+    width: 100%;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid var(--font-color-secondary);
+}
+
+select:focus{
+    outline: none;
+    border: 2px solid var(--color-primary);
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    margin: 10px 0;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+li:hover{
+    color: var(--color-primary);
+    font-weight: 600;
+    background-color: var(--background-color);
+    border-radius: 12px;
+}
+
+main {
+  grid-area: cursos;
+}
+
+footer {
+  grid-area: pie-pag;
 }
