@@ -9,6 +9,7 @@
   --color-secondary: #7766c6;
   --color-tertiary: #ffc212;
   --color-quaternary: #f9b0c3;
+  --color-dark: #2a2a36;
   --background-color: #e0dffd;
   --background-color-secondary: rgb(245, 245, 245);
   --font-color: #46467a;
@@ -25,7 +26,7 @@ body {
   height: 100vh;
   grid-template-columns: 1fr 6fr;
   background-color: var(--background-color-secondary);
-  padding: 20px;
+  color: var(--color-dark);
 }
 
 /* CSS menú lateral */
@@ -39,6 +40,11 @@ aside {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.047);
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  width: 15%;
 }
 
 .logo{
@@ -66,6 +72,12 @@ li{
     padding: 10px 10px;
     cursor: pointer;
     font-weight: 300;
+    transition: all 0.35s ease;
+}
+
+li a{
+    color: var(--color-dark);
+    text-decoration: none;
 }
 
 li:hover{
@@ -75,10 +87,103 @@ li:hover{
     border-radius: 12px;
 }
 
+/*CSS Contenido principal*/
+
+
+
 main {
   grid-area: cursos;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+.cursos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.curso-individual{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    gap: 20px;
+    border-radius: 12px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.curso-individual:hover{
+    transform: translateY(-12px);
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.047);
+}
+
+.curso-individual img{
+    width: 100%;
+    border-radius: 12px;
+    filter: saturate(0.6);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.curso-individual:hover img{
+    filter: saturate(1.2);
+    transform: scale(1.02);
+}
+
+.curso-individual p{
+    font-size: 0.9em;
+}
+
+.descripcion-curso{
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+button{
+    background-color: var(--color-primary);
+    color: white;
+    letter-spacing: 1.5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.35s ease;
+}
+
+button:hover{
+    background-color: var(--color-secondary);
 }
 
 footer {
   grid-area: pie-pag;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  background-color: var(--color-primary);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+  margin: 0 60px 20px 60px;
+  border-radius: 6px;
+}
+
+.redes{
+    font-size: 1.2em;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
 }
