@@ -69,7 +69,7 @@ ul {
 
 li {
   margin: 10px 0;
-  padding: 10px 10px;
+  padding: 10px;
   cursor: pointer;
   font-weight: 300;
   transition: all 0.35s ease;
@@ -168,6 +168,8 @@ button:hover {
   background-color: var(--color-secondary);
 }
 
+/*CCS Pie de Página*/
+
 footer {
   grid-area: pie-pag;
   display: flex;
@@ -188,3 +190,40 @@ footer {
   gap: 12px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "menu"
+      "cursos"
+      "pie-pag";
+    grid-template-columns: 1fr;
+  }
+
+  aside{
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .logo{
+    width: 25%;
+  }
+
+  menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+  }
+
+  li{
+    margin: 0;
+    padding: 5px;
+  }
+
+}
+
