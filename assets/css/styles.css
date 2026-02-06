@@ -235,6 +235,7 @@ footer {
   main {
     padding: 20px 10px;
     gap: 10px;
+    overflow-y: visible;
   }
 
   .cursos {
