@@ -216,7 +216,7 @@ footer {
     width: 25%;
   }
 
-  menu ul {
+  nav ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
