@@ -23,7 +23,8 @@ https://tamarariveram.github.io/Animaciones-en-CSS-Cursos-Online/
 ├── 📂 assets
 │    ├── 📂 css
 │    │    └── 🎨 styles.css
-│    ├── 📂 img
+│    ├── 📂 imgs
+│        ├── 🖼️ favicon.ico
 │        ├── 🖼️ logo.png
 │        ├── 🖼️ curso-1.jpg
 │        ├── 🖼️ curso-2.jpg
