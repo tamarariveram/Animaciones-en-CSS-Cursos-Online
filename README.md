@@ -8,6 +8,13 @@ Generado con grid y flexbox.
 
 https://tamarariveram.github.io/Animaciones-en-CSS-Cursos-Online/
 
+## Tecnologías
+
+- HTML5
+- CSS3
+- Grid Layout
+- Flexbox
+
 ## Estructura del proyecto
 
 ```bash
